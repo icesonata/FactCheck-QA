@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+message TopKDocumentsRequest {
+    string query = 1;
+    int32 k = 2;
+}
+
+message RerankDocumentsRequest {
+    repeated int32 ids = 1;
+    string query = 2;
+    int32 k = 3; 
+}
+
+message DocumentMatch {
+    int32 id = 1;
+    double distance = 2;
+}
+
+message SearchResponse {
+   enum Error {
+       NO_ERROR = 0;
+       INDEX_IS_NOT_READY = 1;
+       UNKNOWN_ERROR = 2;
+   }
+   repeated DocumentMatch matches = 1;
+   Error error = 2;
+}
+
+message SyncRequest {
+    oneof target {
+        int32 documentId = 1;
+        bool all = 2;
+    }
+    bool delete = 3;
+}
+
+message SyncResponse {
+    enum Error {
+        NO_ERROR = 0;
+        ANOTHER_SYNC_IN_PROGRESS = 1;
+        INDEX_IS_NOT_READY = 2;
+        UNKNOWN_ERROR = 3;
+    }
+    Error error = 1;
+}
+
+service Encoder {
+    rpc FindTopKDocuments(TopKDocumentsRequest) returns (SearchResponse);
+    rpc RetrieveRerankDocuments(RerankDocumentsRequest) returns (SearchResponse);
+    rpc Sync(SyncRequest) returns (SyncResponse);
+}
