@@ -1,0 +1,10 @@
+.space-40 {
+  width: 100%;
+  height: 40px;
+}
+
+@media only screen and (max-width: 425px) {
+  .space-40 {
+    height: 20px;
+  }
+}

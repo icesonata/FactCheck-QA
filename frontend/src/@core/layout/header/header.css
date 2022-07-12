@@ -1,0 +1,151 @@
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    box-shadow: -1px 0px 4px rgba(33, 33, 33, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.header__layout{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.layout__logo{
+    font-size: 32px;
+    font-weight: 500;
+    font-family: "Roboto Slab";
+    font-style: normal;
+    color: #030B4E;
+    display: block;
+    cursor: pointer;
+}
+
+.link__list-items-nav{
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.item_nav{
+    float: left;
+    margin-left: 60px;
+}
+
+.link_nav{
+    color: #030B4E;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Roboto Slab";
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.link_nav:hover{
+    color: #FF4D15;
+}
+
+.bx-list-ul, .bx-x {
+  cursor: pointer;
+  font-size: 32px;
+  color: #030B4E;
+}
+
+.bxl-github, .bxs-file-doc, .bxs-bookmark {
+  cursor: pointer;
+  font-size: 24px;
+  color: #030B4E;
+}
+
+.bx-x {
+    margin-top: 18px;
+    margin-right: 18px;
+}
+
+.header__navigation {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    width: 40%;
+    z-index: 13;
+    transition: left 0.5s;
+}
+
+.navigation__list {
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgb(169 169 169);
+}
+
+.button__cancel {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__navigation div ul {
+    list-style: none;
+}
+
+.list-links {
+    margin-top: 12px;
+}
+
+.list-links li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.list-links li a {
+    color: #030B4E;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 8px;
+}
+
+.header__black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 12;
+    background-color: black;
+    opacity: 0.1;
+}
+
+@media only screen and (max-width: 425px) {
+    .header__navigation {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .layout__link {
+        display: none;
+    }
+    .layout__show-links {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .layout__link {
+        display: block;
+    }
+    .layout__show-links {
+        display: none;
+    }
+}

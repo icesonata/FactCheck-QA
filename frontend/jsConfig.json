@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@core/*": ["src/@core/*"],
+            "@page/*":["src/page/*"],
+        }
+    },
+    "exclude": ["node_modules"]
+}

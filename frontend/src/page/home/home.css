@@ -1,0 +1,320 @@
+.home__header-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.header-content {
+  display: flex;
+  height: auto;
+  width: 60%;
+}
+
+.header-content__box-title {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.box-title__title > h1 {
+  font-weight: 700;
+  color: #030B4E;
+}
+
+.header-content__image-header {
+  width: 50%;
+}
+
+.title--modifile {
+  color: darkorange;
+}
+
+.image-header img{
+  width: 100%;
+  height: inherit;
+}
+
+.box-title__group-button {
+  width: 62%;
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  width: 170px;
+  height: 46px;
+  color: white;
+  box-shadow: 1px 1px 4px rgb(146, 146, 146);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.icon_arrow {
+  margin-left: 12px;
+}
+
+.btn-documents:hover {
+  background-color: #232a55;
+  color: white;
+}
+
+.btn-tracking:hover {
+  background-color: rgb(199, 109, 0);
+  color: white;
+}
+
+.bx-right-arrow-alt {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.btn-documents {
+  background-color: #343c7e;
+}
+
+.btn-tracking {
+  background-color: darkorange;
+}
+
+.title {
+  text-align: center;
+  color: #030B4E;
+  font-weight: 700;
+}
+
+.thanks__description, .card__description {
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  width: 55%;
+  text-align: center;
+  color: #030B4E;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.thanks__card , .member__card{
+  margin-top: 18px;
+  width: 100%;
+}
+
+.card__image, .card__image-student {
+  display: flex;
+  justify-content: center;
+}
+
+.card__image img , .card__image-student img{
+  width: 10%;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgb(145 145 145);
+}
+
+.card__title-name {
+  margin-top: 12px;
+  text-align: center;
+  color: #030B4E;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17px;
+}
+
+.project__layout-members {
+  margin-top: 16px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: auto
+}
+
+.members {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 60%;
+}
+
+.members__member {
+  width: 50%;
+  padding: 12px;
+}
+
+@media only screen and (max-width: 1920px) {
+  .box-title__group-button {
+    width: 65%;
+  }
+  .btn {
+    width: 48%;
+  }
+
+  .card__image img{
+    width: 9%;
+  }
+
+  .card__image-student img{
+    width: 28%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .header-content {
+    display: flex;
+    height: auto;
+    width: 70%;
+  }
+
+  .box-title__group-button {
+    width: 90%;
+  }
+
+  .btn {
+    width: 48%;
+  }
+
+  .card__image img{
+    width: 12%;
+  }
+
+  .card__image-student img{
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-content {
+    width: 70%;
+  }
+
+  .box-title__group-button {
+    width: 100%;
+  }
+
+  .description {
+    width: 50%;
+  }
+
+  .card__image img{
+    width: 15%;
+  }
+
+  .card__image-student img{
+    width: 42%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .header-content__box-title {
+    width: 100%;
+  }
+
+  .box-title__title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header-content__image-header {
+    display: none;
+  }
+
+  .box-title__group-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btn {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-tracking {
+    margin-top: 12px;
+  }
+
+  .description {
+    width: 60%;
+  }
+
+  .card__image img{
+    width: 20%;
+  }
+
+  .members {
+    width: 68%;
+    flex-direction: column;
+  }
+
+  .members__member {
+    width: 100%;
+  }
+
+  .member__card {
+    width: 100%;
+  }
+
+  .card__image-student img{
+    width: 28%;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+  .header-content {
+    width: 65%;
+  }
+
+  .box-title__title {
+    width: 100%;
+  }
+
+  .box-title__group-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 22px;
+  }
+
+  .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .description {
+    width: 80%;
+  }
+
+  .card__image img{
+    width: 33%;
+  }
+
+  .members {
+    flex-direction: column;
+  }
+
+  .members__member {
+    width: 100%;
+  }
+
+  .member__card {
+    width: 100%;
+  }
+
+  .card__image-student img{
+    width: 50%;
+  }
+
+  .description__1 {
+    display: none;
+  }
+}
+
