@@ -1,6 +1,22 @@
 # Scalable fact-checking and question answering system
 # Table of contents
-[Manual](#Manual)
+[Idea](#idea)
+- [Retriever](#retriever)
+- [Reader and Inferrer](#reader-and-inferrer)
+
+[Manual](#manual)
+- [Install dependencies](#1-install-dependencies)
+- [Setup indices](#2-setup-indices)
+    - [ElasticSearch](#21-elasticsearch-index)
+    - [MySQL database](#22-mysql-database)
+- [Import data to indices](#3-import-data-to-indices)
+- [Deploy](#4-deploy)
+    - [Backend](#backend)
+    - [Encoder](#encoder)
+    - [Frontend](#frontend)
+- [Preprocess](#preprocess)
+
+[Note](#note)
 
 # Idea
 Our main contribution is a scalable fact-checking system which provides two main features:
@@ -37,8 +53,8 @@ sudo apt-get install libopenblas-dev
 sudo apt-get install libomp-dev
 ```
 
-## 2. Setup indices.
-### 2.1. ElasticSearch
+## 2. Setup indices
+### 2.1. ElasticSearch index
 Clone: 
 ```bash
 git clone https://github.com/icesonata/docker-es-cococ-tokenizer.git
@@ -106,7 +122,7 @@ Count the number of documents in an index:
 curl -XGET localhost:9200/vi_mlqa_test/_count
 ```
 
-### 2.2. MySQL
+### 2.2. MySQL database
 Setup MySQL with password=`root` and host port=`15432`
 ```bash
 docker run --name db_index -e MYSQL_ROOT_PASSWORD=root -p 15432:3306 -d mysql:latest
