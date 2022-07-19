@@ -14,7 +14,10 @@
     - [Backend](#backend)
     - [Encoder](#encoder)
     - [Frontend](#frontend)
-- [Preprocess](#preprocess)
+
+[Preprocess](#preprocess)
+
+[Use case](#use-case)
 
 [Note](#note)
 
@@ -245,6 +248,16 @@ npm run dev
 Look into `dataset/[Research]_Sentence_processing_for_SquAD_format_dataset.ipynb`
 
 or you can reuse the available resources of the MLQA dataset we provide.
+
+# Use case
+API format and relevant documents of the backend can be found in `backend/docs`.
+
+The system serves three services through API, you can request it via API endpoints below, given a field namely `data` as a form data:
+- `localhost:8888/api/search/relevance/`: information retrieval, retrieve relevant data given *a piece of information*
+- `localhost:8888/api/search/answering/`: question answering, answer a *question* given by user
+- `localhost:8888/api/search/inference/`: fact-checking, returns a list of evidence support/refute the given *claim* given by user
+
+*Note: The url strictly requires the trailing slash `/` at the end. Also, replace the address if the backend runs on different port or address.
 
 # Note
 There are some note for this project:
